@@ -123,7 +123,7 @@ func getPosts(url string) (*Posts, error) {
 			img, _ := s.Find("img").Attr("src")
 			//NSFW post
 			nsfw := false
-			if !strings.HasPrefix(img, "http://") {
+			if !strings.HasPrefix(img, "https://") {
 				img = Url1cak + img
 				nsfw = true
 			}
