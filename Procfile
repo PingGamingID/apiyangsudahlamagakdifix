@@ -1,0 +1,2 @@
+$ cat Procfile
+web: apiyangsudahlamagakdifix
