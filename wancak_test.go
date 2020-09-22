@@ -36,11 +36,11 @@ func TestGetSinglePost(t *testing.T) {
 	if post.NSFW {
 		t.Error("This post is not nsfw")
 	}
-	if post.Img != "http://cdn1.1cak.tv/posts/d7c311f7790379833f042e16cb113800_t.jpg" {
+	if post.Img != "https://cdn1.1cak.tv/posts/d7c311f7790379833f042e16cb113800_t.jpg" {
 		t.Error("Wrong img url, got", post.Img)
 	}
-	if post.Url != "http://1cak.com/1009441" {
-		t.Errorf("Expected http://1cak.com/1009441, got %s", post.Url)
+	if post.Url != "https://1cak.com/1009441" {
+		t.Errorf("Expected https://1cak.com/1009441, got %s", post.Url)
 	}
 }
 
@@ -52,7 +52,7 @@ func TestNsfwPost(t *testing.T) {
 	if !post.NSFW {
 		t.Error("This is nsfw post")
 	}
-	if post.Img != "http://1cak.com/images/unsave.jpg" {
+	if post.Img != "https://1cak.com/images/unsave.jpg" {
 		t.Errorf("Wrong img url, got %s", post.Img)
 	}
 }
