@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	Url1cak string = "http://1cak.com"
+	Url1cak string = "https://1cak.com"
 )
 
 var (
@@ -97,7 +97,7 @@ func GetPostId(id string) (*Post, error) {
 	post.Title = doc.Find("h3").Text()
 	post.NSFW = false
 	post.Img, _ = doc.Find("img[title]").Attr("src")
-	if !strings.HasPrefix(post.Img, "http://") {
+	if !strings.HasPrefix(post.Img, "https://") {
 		post.Img = Url1cak + "/images/unsave.jpg"
 		post.NSFW = true
 	}
